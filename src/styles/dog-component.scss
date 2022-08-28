@@ -1,0 +1,50 @@
+
+$color: #1abc9c;
+
+.dog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dog-title {
+  color: $color;
+  margin: 5px;
+  text-align: center;
+}
+
+.dog-subtitle {
+  margin: 0;
+  text-align: center;
+} 
+
+.dog-img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+}
+
+.dog-button {
+  margin: 10px;
+  font-size: 20px;
+  width: 250px;
+}
+
+.dog-image {
+  width: 100%;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+  .dog-container {
+    padding: 5px;
+  }
+
+  .dog-img-container {
+    padding: 10px;
+  }
+}

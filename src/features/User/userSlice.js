@@ -31,6 +31,7 @@ export const userSlice = createSlice({
       .addCase(validateEmail.fulfilled, (state, action) => {
         state.isLoading = false;
         state.result = action.payload;
+        state.errors = null;
       })
       .addCase(validateEmail.rejected, (state, action) => {
         state.isLoading = false;
@@ -53,8 +54,10 @@ export const validateEmail = createAsyncThunk('get/validateEmail',
   }
 );
 
-// The function below is called a selector and allows us to select a value from
-// the state.
+// The function below is called a selector and allows us to select a value from the state
 export const getUserState = (state) => state.user;
+
+// the function below will export actions in reducer
+export const { changeValues } = userSlice.actions;
 
 export default userSlice.reducer;
